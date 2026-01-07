@@ -3,8 +3,8 @@
     <dxi-validator-validation-rule type="required" message="Email wird benötigt"></dxi-validator-validation-rule>
     <dxi-validator-validation-rule type="email" message="Email ungültig"></dxi-validator-validation-rule>
 
-    <dxi-validator-validation-rule type="async" message="Email vorhanden oder nicht erlaubt"
-      [validationCallback]="emailValidation"></dxi-validator-validation-rule>
+    <dxi-validator-async-rule message="Email vorhanden oder nicht erlaubt"
+      [validationCallback]="emailValidation"></dxi-validator-async-rule>
 
   </dx-validator>
 </dx-text-box>

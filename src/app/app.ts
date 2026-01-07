@@ -16,15 +16,12 @@ export class App {
   email: string = 'test@test.test';
 
   //WORKED YEARS NOW (still deployed) IN PROJECT BEFORE - BUT NOW COMPILATION ERROR => AND RUNTIME ERROR SAYS: validationCallback of an asynchronous rule should return a jQuery or a native promise
-  // async emailValidation(params: ValidationCallbackData): Promise<boolean> {
-  //   return new Promise((resolve) => {
-  //     setTimeout(() => { resolve(true); }, 2000);
-  //   });
-  // }
-
-  //COMPILES - BUT RUNTIME ERROR WHEN VALIDATION OCCURS JUST TRY CHANGE EMAIL SEE CONSOLE
-  emailValidation(params: ValidationCallbackData): boolean {    
-    return true;
+  async emailValidation(params: ValidationCallbackData): Promise<boolean> {
+    return new Promise((resolve) => {
+      setTimeout(() => { resolve(true); }, 2000);
+    });
   }
+
+
 
 }
